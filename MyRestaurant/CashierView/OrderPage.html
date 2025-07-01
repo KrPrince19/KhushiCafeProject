@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khushi Cafe</title>
+    <link rel="stylesheet" href="OrderPage.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#home" class="logo">Khushi <span>Cafe</span></a>
+
+      <div class="nav">
+        <a href="restaurant.html">Home</a>
+      </div>
+    </header>
+
+    
+
+    <div class="main-container">
+
+      <div class="menu-item">
+        <h1>Menu</h1>
+        <div id="item-name">
+          <ul>
+            <li onclick="showSection('nasta')">Nasta</li>
+            <li onclick="showSection('coffee')">Coffee</li>
+            <li onclick="showSection('chai')">Chai</li>
+            <li onclick="showSection('icecreame')">Ice-Creame</li>
+            <li onclick="showSection('dishes')">Dishes</li>
+            <li onclick="showSection('milkshake')">ShakeOut</li>
+            <li onclick="showSection('fastfood')">Fast-Food</li>
+
+          </ul>
+        </div>
+      </div>
+
+
+        <div class="section" id="nasta">
+          <h1 id="coffee-text">NASTA</h1>
+          
+          <div class="item-container">
+            
+            <div id="item-box">
+              
+              <div class="Item-name-select-btn">
+                <h1 id="coffee-name1">Poha</h1>
+                <input type="checkbox" class="my-checker" data-id="1">
+              </div>
+              
+              <h3 id="price1">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity1')">-</button>
+              <p id="quantity1">1</p>
+              <button onclick="increment('quantity1')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name2">Aloo Paratha</h1>
+              <input type="checkbox" class="my-checker" data-id="2">
+            </div>
+            <h3 id="price2">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity2')">-</button>
+              <p id="quantity2">1</p>
+              <button onclick="increment('quantity2')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name3">Puri Bhaji</h1>
+              <input type="checkbox" class="my-checker" data-id="3">
+            </div>
+            <h3 id="price3">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity3')">-</button>
+              <p id="quantity3">1</p>
+              <button onclick="increment('quantity3')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name4">Dosa</h1>
+              <input type="checkbox" class="my-checker" data-id="4">
+            </div>
+            <h3 id="price4">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity4')">-</button>
+              <p id="quantity4">1</p>
+              <button onclick="increment('quantity4')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name5">Chole Bhature</h1>
+              <input type="checkbox" class="my-checker" data-id="5">
+            </div>
+            <h3 id="price5">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity5')">-</button>
+              <p id="quantity5">1</p>
+              <button onclick="increment('quantity5')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name6">Oats Porridge</h1>
+              <input type="checkbox" class="my-checker" data-id="6">
+            </div>
+            <h3 id="price6">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity6')">-</button>
+              <p id="quantity6">1</p>
+              <button onclick="increment('quantity6')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name30">Paneer Paratha</h1>
+              <input type="checkbox" class="my-checker" data-id="30">
+            </div>
+            <h3 id="price30">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity30')">-</button>
+              <p id="quantity30">1</p>
+              <button onclick="increment('quantity30')">+</button>
+            </span>
+          </div>
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name8">Chapati</h1>
+              <input type="checkbox" class="my-checker" data-id="8">
+            </div>
+            <h3 id="price8">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity8')">-</button>
+              <p id="quantity8">1</p>
+              <button onclick="increment('quantity8')">+</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- coffee item section  -->
+      <div id="coffee" class="section" style="display: none;">
+        <h1 id="coffee-text">COFFEE</h1>
+        
+        <div class="item-container">
+          
+          <div id="item-box">
+            
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name9">Cappuchino</h1>
+              <input type="checkbox" class="my-checker" data-id="9">
+            </div>
+            
+            <h3 id="price9">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity9')">-</button>
+              <p id="quantity9">1</p>
+              <button onclick="increment('quantity9')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name10">Americano</h1>
+              <input type="checkbox" class="my-checker" data-id="10">
+            </div>
+            <h3 id="price10">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity10')">-</button>
+              <p id="quantity10">1</p>
+              <button onclick="increment('quantity10')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name11">Milk Coffee</h1>
+              <input type="checkbox" class="my-checker" data-id="11">
+            </div>
+            <h3 id="price11">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity11')">-</button>
+              <p id="quantity11">1</p>
+              <button onclick="increment('quantity11')">+</button>
+            </span>
+          </div>
+          
+          <!-- <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name4">Dosa</h1>
+              <input type="checkbox" class="my-checker" data-id="4">
+            </div>
+            <h3 id="price4">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity4')">-</button>
+              <p id="quantity4">1</p>
+              <button onclick="increment('quantity4')">+</button>
+            </span>
+          </div> -->
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name14">Cold Brew</h1>
+              <input type="checkbox" class="my-checker" data-id="14">
+            </div>
+            <h3 id="price14">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity14')">-</button>
+              <p id="quantity14">1</p>
+              <button onclick="increment('quantity14')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name15">Espresso</h1>
+              <input type="checkbox" class="my-checker" data-id="15">
+            </div>
+            <h3 id="price15">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity15')">-</button>
+              <p id="quantity15">1</p>
+              <button onclick="increment('quantity15')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name16">Black Coffee</h1>
+              <input type="checkbox" class="my-checker" data-id="16">
+            </div>
+            <h3 id="price16">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity16')">-</button>
+              <p id="quantity16">1</p>
+              <button onclick="increment('quantity16')">+</button>
+            </span>
+          </div>
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name130">Latte</h1>
+              <input type="checkbox" class="my-checker" data-id="130">
+            </div>
+            <h3 id="price130">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity130')">-</button>
+              <p id="quantity130">1</p>
+              <button onclick="increment('quantity130')">+</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- chai item section  -->
+      <div id="chai" class="section" style="display: none;">
+        
+        <h1 id="coffee-text">CHAI</h1>
+        
+        <div class="item-container">
+          
+          <div id="item-box">
+            
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name18">Masala Chai</h1>
+              <input type="checkbox" class="my-checker" data-id="18">
+            </div>
+            
+            <h3 id="price18">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity18')">-</button>
+              <p id="quantity18">1</p>
+              <button onclick="increment('quantity18')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name19">Milk Chai</h1>
+              <input type="checkbox" class="my-checker" data-id="19">
+            </div>
+            <h3 id="price19">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity19')">-</button>
+              <p id="quantity19">1</p>
+              <button onclick="increment('quantity19')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name20">Mint Chai</h1>
+              <input type="checkbox" class="my-checker" data-id="20">
+            </div>
+            <h3 id="price20">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity20')">-</button>
+              <p id="quantity20">1</p>
+              <button onclick="increment('quantity20')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name21">Tulsi Chai</h1>
+              <input type="checkbox" class="my-checker" data-id="21">
+            </div>
+            <h3 id="price21">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity21')">-</button>
+              <p id="quantity21">1</p>
+              <button onclick="increment('quantity21')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name22">Black Chai</h1>
+              <input type="checkbox" class="my-checker" data-id="22">
+            </div>
+            <h3 id="price22">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity22')">-</button>
+              <p id="quantity22">1</p>
+              <button onclick="increment('quantity22')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name23">Elaichi Chai</h1>
+              <input type="checkbox" class="my-checker" data-id="23">
+            </div>
+            <h3 id="price23">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity23')">-</button>
+              <p id="quantity23">1</p>
+              <button onclick="increment('quantity23')">+</button>
+            </span>
+          </div>
+          
+          <!-- <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name30">Paneer Paratha</h1>
+              <input type="checkbox" class="my-checker" data-id="30">
+            </div>
+            <h3 id="price30">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity30')">-</button>
+              <p id="quantity30">1</p>
+              <button onclick="increment('quantity30')">+</button>
+            </span>
+          </div> -->
+          <!-- <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name8">Chapati</h1>
+              <input type="checkbox" class="my-checker" data-id="8">
+            </div>
+            <h3 id="price8">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity8')">-</button>
+              <p id="quantity8">1</p>
+              <button onclick="increment('quantity8')">+</button>
+            </span>
+          </div> -->
+        </div>
+      </div>
+      
+      <!-- ice creame item section  -->
+      <div id="icecreame" class="section" style="display: none;">
+        
+        <h1 id="coffee-text">ICE-CREAME</h1>
+        
+        <div class="item-container">
+          
+          <div id="item-box">
+            
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name24">Choco vanilla</h1>
+              <input type="checkbox" class="my-checker" data-id="24">
+            </div>
+            
+            <h3 id="price24">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity24')">-</button>
+              <p id="quantity24">1</p>
+              <button onclick="increment('quantity24')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name25">Amul Fruit Nut</h1>
+              <input type="checkbox" class="my-checker" data-id="25">
+            </div>
+            <h3 id="price25">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity25')">-</button>
+              <p id="quantity25">1</p>
+              <button onclick="increment('quantity25')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name26">Cornetto Double Choco </h1>
+              <input type="checkbox" class="my-checker" data-id="26">
+            </div>
+            <h3 id="price26">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity26')">-</button>
+              <p id="quantity26">1</p>
+              <button onclick="increment('quantity26')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name230">Gourmet Silk-Choco</h1>
+              <input type="checkbox" class="my-checker" data-id="230">
+            </div>
+            <h3 id="price230">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity230')">-</button>
+              <p id="quantity230">1</p>
+              <button onclick="increment('quantity230')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name28">Amul Sugar-Free</h1>
+              <input type="checkbox" class="my-checker" data-id="28">
+            </div>
+            <h3 id="price28">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity28')">-</button>
+              <p id="quantity28">1</p>
+              <button onclick="increment('quantity28')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name29">CooKie Crunch</h1>
+              <input type="checkbox" class="my-checker" data-id="29">
+            </div>
+            <h3 id="price29">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity29')">-</button>
+              <p id="quantity29">1</p>
+              <button onclick="increment('quantity29')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name30">Oreo & Creame</h1>
+              <input type="checkbox" class="my-checker" data-id="30">
+            </div>
+            <h3 id="price30">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity30')">-</button>
+              <p id="quantity30">1</p>
+              <button onclick="increment('quantity30')">+</button>
+            </span>
+          </div>
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name31">ButterScotch</h1>
+              <input type="checkbox" class="my-checker" data-id="31">
+            </div>
+            <h3 id="price31">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity31')">-</button>
+              <p id="quantity31">1</p>
+              <button onclick="increment('quantity31')">+</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- dishes item section  -->
+      
+      <div id="dishes" class="section" style="display: none;">
+        
+        <h1 id="coffee-text">DISHES</h1>
+        
+        <div class="item-container">
+          
+          <div id="item-box">
+            
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name32">Paneer-Biryani</h1>
+              <input type="checkbox" class="my-checker" data-id="32">
+            </div>
+            
+            <h3 id="price32">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity32')">-</button>
+              <p id="quantity32">1</p>
+              <button onclick="increment('quantity32')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name33">Shahi Paneer</h1>
+              <input type="checkbox" class="my-checker" data-id="33">
+            </div>
+            <h3 id="price33">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity33')">-</button>
+              <p id="quantity33">1</p>
+              <button onclick="increment('quantity33')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name34">Tandoori Roti</h1>
+              <input type="checkbox" class="my-checker" data-id="34">
+            </div>
+            <h3 id="price34">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity34')">-</button>
+              <p id="quantity34">1</p>
+              <button onclick="increment('quantity34')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name35">Veg Biryani</h1>
+              <input type="checkbox" class="my-checker" data-id="35">
+            </div>
+            <h3 id="price35">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity35')">-</button>
+              <p id="quantity35">1</p>
+              <button onclick="increment('quantity35')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name36">Naan Roti</h1>
+              <input type="checkbox" class="my-checker" data-id="36">
+            </div>
+            <h3 id="price36">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity36')">-</button>
+              <p id="quantity36">1</p>
+              <button onclick="increment('quantity36')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name37">Paneer Pakuada</h1>
+              <input type="checkbox" class="my-checker" data-id="37">
+            </div>
+            <h3 id="price37">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity37')">-</button>
+              <p id="quantity37">1</p>
+              <button onclick="increment('quantity37')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name38">Gobhi Rice</h1>
+              <input type="checkbox" class="my-checker" data-id="38">
+            </div>
+            <h3 id="price38">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity38')">-</button>
+              <p id="quantity38">1</p>
+              <button onclick="increment('quantity38')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name39">Chili Paneer</h1>
+              <input type="checkbox" class="my-checker" data-id="39">
+            </div>
+            <h3 id="price39">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity39')">-</button>
+              <p id="quantity39">1</p>
+              <button onclick="increment('quantity39')">+</button>
+            </span>
+          </div>
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name56">Paneer Tikka</h1>
+              <input type="checkbox" class="my-checker" data-id="56">
+            </div>
+            <h3 id="price56">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity56')">-</button>
+              <p id="quantity56">1</p>
+              <button onclick="increment('quantity56')">+</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- milk shake item section  -->
+      <div id="milkshake" class="section" style="display: none;">
+        
+        <h1 id="coffee-text">SHAKEOUT</h1>
+        
+        <div class="item-container">
+          
+          <div id="item-box">
+            
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name40">Strawberry MilkShake</h1>
+              <input type="checkbox" class="my-checker" data-id="40">
+            </div>
+            
+            <h3 id="price40">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity40')">-</button>
+              <p id="quantity40">1</p>
+              <button onclick="increment('quantity40')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name41">Come Together</h1>
+              <input type="checkbox" class="my-checker" data-id="41">
+            </div>
+            <h3 id="price41">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity41')">-</button>
+              <p id="quantity41">1</p>
+              <button onclick="increment('quantity41')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name42">Cotton Candy</h1>
+              <input type="checkbox" class="my-checker" data-id="42">
+            </div>
+            <h3 id="price42">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity42')">-</button>
+              <p id="quantity42">1</p>
+              <button onclick="increment('quantity42')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name43">Badam Faluda</h1>
+              <input type="checkbox" class="my-checker" data-id="43">
+            </div>
+            <h3 id="price43">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity43')">-</button>
+              <p id="quantity43">1</p>
+              <button onclick="increment('quantity43')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name44">Orea </h1>
+              <input type="checkbox" class="my-checker" data-id="44">
+            </div>
+            <h3 id="price44">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity44')">-</button>
+              <p id="quantity44">1</p>
+              <button onclick="increment('quantity44')">+</button>
+            </span>
+          </div>
+          
+            <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name46">Pista Badam</h1>
+              <input type="checkbox" class="my-checker" data-id="46">
+            </div>
+            <h3 id="price46">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity46')">-</button>
+              <p id="quantity46">1</p>
+              <button onclick="increment('quantity46')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name46">Kit-kat magic</h1>
+              <input type="checkbox" class="my-checker" data-id="46">
+            </div>
+            <h3 id="price46">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity46')">-</button>
+              <p id="quantity46">1</p>
+              <button onclick="increment('quantity46')">+</button>
+            </span>
+          </div>
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name47">Mixed Fruit Punch</h1>
+              <input type="checkbox" class="my-checker" data-id="47">
+            </div>
+            <h3 id="price47">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity47')">-</button>
+              <p id="quantity47">1</p>
+              <button onclick="increment('quantity47')">+</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- fast-food item section  -->
+      
+      <div id="fastfood" class="section" style="display: none;">
+        <h1 id="coffee-text">FAST FOOD</h1>
+        
+        <div class="item-container">
+          
+          <div id="item-box">
+            
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name48">Noddle</h1>
+              <input type="checkbox" class="my-checker" data-id="48">
+            </div>
+            
+            <h3 id="price48">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity48')">-</button>
+              <p id="quantity48">1</p>
+              <button onclick="increment('quantity48')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name49">Paneer Noodle</h1>
+              <input type="checkbox" class="my-checker" data-id="49">
+            </div>
+            <h3 id="price49">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity49')">-</button>
+              <p id="quantity49">1</p>
+              <button onclick="increment('quantity49')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name50">Burger</h1>
+              <input type="checkbox" class="my-checker" data-id="50">
+            </div>
+            <h3 id="price50">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity50')">-</button>
+              <p id="quantity50">1</p>
+              <button onclick="increment('quantity50')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name51">Paneer Pizza</h1>
+              <input type="checkbox" class="my-checker" data-id="51">
+            </div>
+            <h3 id="price51">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity51')">-</button>
+              <p id="quantity51">1</p>
+              <button onclick="increment('quantity51')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name52">Veggie Pizza</h1>
+              <input type="checkbox" class="my-checker" data-id="52">
+            </div>
+            <h3 id="price52">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity52')">-</button>
+              <p id="quantity52">1</p>
+              <button onclick="increment('quantity52')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name53">Veggie Burger</h1>
+              <input type="checkbox" class="my-checker" data-id="53">
+            </div>
+            <h3 id="price53">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity53')">-</button>
+              <p id="quantity53">1</p>
+              <button onclick="increment('quantity53')">+</button>
+            </span>
+          </div>
+          
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name54">Paneer Burger</h1>
+              <input type="checkbox" class="my-checker" data-id="54">
+            </div>
+            <h3 id="price54">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity54')">-</button>
+              <p id="quantity54">1</p>
+              <button onclick="increment('quantity54')">+</button>
+            </span>
+          </div>
+          <div id="item-box">
+            <div class="Item-name-select-btn">
+              <h1 id="coffee-name55">Sandwich</h1>
+              <input type="checkbox" class="my-checker" data-id="55">
+            </div>
+            <h3 id="price55">Rs:20</h3>
+            <span>
+              <button onclick="decrement('quantity55')">-</button>
+              <p id="quantity55">1</p>
+              <button onclick="increment('quantity55')">+</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="billing">
+       
+        <h1 id="billing-page">Order Item</h1>
+        <a href="#print-bill">
+          
+          <button id="make-bill" onclick="makebill()">Make Bill</button>
+          
+        </a>
+        <div class="bill-box">
+          
+          <table>
+            <th id="thData">Item</th>
+            <th id="thData">Quantity</th>
+            <th id="thData">Price</th>
+          </table>
+        </div>
+        
+        
+        <table id="selected-items">
+          <tr>
+            
+                <td id="name"></td>
+                <td id="quantity"></td>
+                <td id="price"></td>
+              </tr>
+              
+            </table>
+            
+          </div>
+        </div>
+
+
+      <!-- billing section  -->
+
+    </div>
+    
+    <div id="print-bill">
+      
+      <div id="Bill-Box">
+
+        <div >
+          <h2> Final Bill </h2>
+        </div>
+
+        <div id="bill-title">
+          
+        </div>
+        <table id="output-bill">
+          
+        </table>
+        <h3  style="background-color: rgb(188, 198, 198);">Total Price = <span id="TotalPrice"  style="margin-left: 56%;"></span></h3>
+      </div>
+
+      <button id="print-btn" onclick="print_btn()">Print Bill</button> 
+    </div>
+    
+    <script src="OrderPage.js"></script>
+  </body>
+</html>

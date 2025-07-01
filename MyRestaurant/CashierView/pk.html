@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+  /* margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  /* scroll-behavior: smooth; */
+  /* font-family: "Poppins",sans-serif; */
+} */
+
+:root{
+  --bg-color:#fcfcfc;
+}
+
+body{
+
+  /* background: var(--bg-color);
+  color:var(--text-color);
+   overflow-x: hidden; */
+
+}
+.my-header .logo{
+  color:rgb(255, 255, 255);
+  font-size: 2.0rem;
+  margin-left:2px;
+}
+
+#menu-icon{
+  display: none;
+}
+.my-header{
+  position:fixed;
+  top:0;
+  left: 0;
+  width:100vw;
+  height: 50px;
+  padding: 2rem 5% 2rem;
+background-color: #6F4E37;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  z-index:5;
+
+}
+
+.logo,.Menu-logo{
+  font-size:1.2rem;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.navbar{
+  margin-top: 25px;;
+}
+.navbar a{
+ color: rgb(255, 255, 255);
+ cursor: pointer;
+ font-size: 1.1rem;
+ margin: 20px 10px 0px 10px;
+ font-family: 'Abril Fatface';
+ font-weight: bold;
+
+}
+
+.Menu-my-header{
+  position:fixed;
+  top:0;
+  left: 0;
+  width:100%;
+  height: 50px;
+  padding: 2rem 5% 2rem;
+background-color: #6F4E37;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  z-index:5;
+}
+.Menu-logo{
+  color:rgb(255, 255, 255);
+  font-size: 2.0rem;
+  margin-left:2px;
+}
+.Menu-nav a{
+   color: rgb(255, 255, 255);
+ cursor: pointer;
+ font-size: 1.1rem;
+ margin: 20px 10px 0px 10px;
+ font-family: 'Abril Fatface';
+ font-weight: bold;
+}
+
+/* main  cafe page navbar  */
+.navbar a:hover{
+ cursor: pointer;
+ color:rgb(10, 199, 232);
+  background-color: #f6f4f4;
+  border:1px solid burlywood;
+  padding: 2px;
+  border-radius: 4px;
+
+}
+
+/* Menu item nav  */
+
+.Menu-nav a:hover{
+ cursor: pointer;
+  color:rgb(10, 199, 232);
+  background-color: #f6f4f4;
+  border:1px solid burlywood;
+  padding: 2px;
+  border-radius: 4px;
+
+} 
+
+.highlight{
+  width:153px;
+  background-color: rgb(255, 255, 255);
+  color:#050505;
+  border:1px solid whitesmoke;
+  border-top: -10px;
+  border-radius: 4px;
+    text-align: center;
+    margin-bottom: -61px;
+    margin-left: 213px;
+    padding: 3px 0px 5px 0px;
+  animation: 2s ease blink;
+
+}
+
+
+
+.arrow{
+  position: inherit;
+  top: -10px;
+  left: 50%;
+  margin-left:90%;
+  transform: translateY(16%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid #ffffff;
+  animation: 2s ease blink;
+
+}
+
+
+@keyframes blink{
+  0%{
+    color:#6F4E37;
+    font-size: 1rem;
+  }
+  50%{
+    color:#fffefe;
+     font-size: 1.2rem;
+  }
+  75%{
+    color:#6F4E37;
+     font-size: 1rem;
+  }
+  100%{
+    color:#fffefe;
+     font-size: 1.2rem;
+  }
+}
+
+.main-container{
+ /
+}
+
+
+.item-menu{
+      width: 100vw;
+    border-top: 2px solid ;
+    margin-top: 60px;
+   
+  }
+  
+  .item-menu h1{
+    text-align: center;
+    font-size: 2rem;
+    background-color: #b5b4b4;
+   color: #6F4E37;
+
+  }
+  .item-box{
+    background: #b5b4b4;
+  display: grid;
+    grid-template-columns: auto auto auto auto ;
+}
+
+
+
+#item1{
+ width: 260px;
+  height: 375px;
+  border-radius: 10px;
+  color: white;
+   background-color: rgba(167, 164, 164, 0.5);
+  border: 1px solid#6F4E37;
+  margin: 4px;
+}
+
+#item-img{
+      width: 230px;
+    height: 172px;
+    margin: 8px 0px 0px 16px;
+}
+#description{
+      overflow-wrap: break-word;
+    white-space: normal;
+        color: #f5f5f5;
+    width: 240px;
+    margin: 12px 0px 0px 7px;
+    text-align: center;
+}
+
+#item1 h2{
+      color: #6F4E37;
+      text-align: center;
+    margin-top: 11px;
+}
+.cont-coffee{
+width:100px;
+height:50px;
+}
+.typed-cursor{
+  display: none;
+}
+
+.Highlight_cafeName{
+  color: rgb(151, 171, 237);
+    font-size: 1.6rem;
+    text-decoration: underline;
+}
+#welcome-text{
+    width:100%;
+    margin-top: 20px;
+    color: rgb(6, 6, 6);
+    font-size: 0.8rem; 
+}
+
+.greet div{
+    margin-top: 40px;
+}
+
+.greet-time{
+width:60vw;
+height: 240px;
+padding: 5px;
+background-color: rgba(29, 21, 21, 0.5);
+border-radius: 9px;
+justify-content: center;
+align-items: center;
+}
+
+
+.greet{
+margin-top:20px;
+font-size: 1.8rem;
+font-weight: bold;
+color: white;
+}
+
+
+.swiper {
+width: 100%;
+margin-top: 100px;
+margin-left:100px;
+height: 500px;
+background-color: #b1aca8;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: row;
+width: 100vw;
+height: 100%;
+}
+
+.swiper-slide img {
+width: 50vw;
+height: 100%;
+}
+
+.food-info {
+width: 60%;
+height: 100%;
+color: #000;
+padding: 20px;
+box-sizing: border-box;
+
+} 
+
+.food-info h2 {
+color:white;
+margin-bottom: 10px;
+font-size: 24px;
+}
+
+.food-info p {
+font-size: 18px;
+line-height: 1.5;
+font-weight: bold;
+color:rgb(247, 246, 246);
+padding: 10px;
+border-radius: 8px;
+}
+
+
+.contact-area{
+      width: 100vw;
+    height: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #b7b5b3;
+    background-size: cover;
+    position: absolute;
+}
+
+#contact-item{
+ background-color: rgba(29, 21, 21, 0.5);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 29px;
+    align-items: center;
+    margin-top: 3%;
+    margin-left: 30%;
+    height: 350px;
+    border-radius: 4px;
+}
+
+#contact-us{
+  color:white;
+  font-family: 'Abril Fatface';
+  font-size: 2.6rem;
+
+}
+
+#contact-data{
+  margin-top: 20px;
+  font-size: large;
+  margin-right: 180px;
+  font-family: 'Abril Fatface';
+
+}
+.input-box{
+  border: none;
+  border-bottom: 2px solid #333;
+  padding: 8px 0;
+  width: 300px;
+  font-size: 16px;
+  outline: none;
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.input-box:hover {
+  border-bottom: 2px solid #00d9ff; 
+}
+
+#message{
+  margin-top: 15px;
+  margin-left: 56px;
+  width: 300px;
+  height: 80px;
+
+}
+#btn{
+  margin-top: 15px;
+  padding: 3px 10px 3px 10px;
+  color: #4106f2;
+  border: 2px solid rgb(41, 11, 19);
+  border-radius: 4px;
+  font-family: 'Abril Fatface';
+  font-size: 1.0rem;
+
+}
+#btn:hover{
+  color: #06f2e2;
+  background-color: #aa0eda;
+  border-color: #6F4E37;
+
+}
+
+.about-section{
+    display: flex;
+    width: 100%;
+    height:100%;
+    margin-top: 50%;
+    padding:20px;
+    background-color: #fbfafa;
+}
+
+.about-us{
+  display: flex;
+}
+.about-img{
+  margin-left: 100px;
+  padding: 20px;
+}
+.about-us img{
+  width:350px;
+  height: 300px;
+
+}
+.about-msg {
+  text-align: center;
+  margin-top:15%;
+}
+
+.about-item{
+  display: grid;
+grid-template-columns: auto auto auto;
+justify-content: space-around;
+  background-color: #6F4E37;
+  padding: 10px;
+}
+.item-area{
+  padding: 4px;
+  margin-left:20px;
+}
+ #item-data{
+  margin-left:2px;
+  font-family:'Abril Fatface' ;
+  color:white;
+ }
+.icon-box{
+  font-size: 2rem;
+  width: 100px;
+  height: 100px;
+  padding: 16px;
+  margin-left: -9px;
+}
+#item-name{
+  font-size: 1.8rem;
+  margin-left: -8px;
+  font-family: 'Abril Fatface';
+  color:white;
+}
+.item-box span{
+      display: flex;
+    margin-top: 18px;
+    padding: 3px;
+    justify-content: space-around;
+    background-color: #a39c9c;
+}
+.item-box button{
+  padding: 4px;
+}
+.my-checker{
+  width: 20px;
+  height: 20px;
+}
+.service-section{
+  margin-top: 45px;
+  border-top:2px solid #6F4E37;
+  background-color: #f6f4f4;
+ 
+}
+
+.service-section h1{
+  text-align: center;
+  padding: 10px;
+  font-size: 2.2rem;
+  font-family: 'Abril Fatface';
+}
+.service-container{
+  margin-top: 25px;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+}
+
+#service-box{
+  background-color: white;
+    width: 20%;
+    padding:4px;
+    border: 1px solid #6F4E37;
+    border-radius: 2px;
+}
+#service-box h1{
+
+  font-size:1.4rem;
+  font-family: 'Abril Fatface';
+}
+#service-box p{
+  font-size:1.2rem;
+  font-family: 'Abril Fatface';
+  padding:2px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+#service-box span{
+  display: flex;
+  align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bottom-section{
+  background-color: #fbf6f6;
+  margin-top: 30px;
+  border-top:2px solid #6F4E37;
+  height: 200px;
+
+}
+.bottom-item{
+  display: flex;
+  justify-content: space-evenly;
+}
+.bottom-section h1{
+  font-size: 1.4rem;
+  margin-top: 20px;
+  font-family: 'Abril Fatface';
+
+}
+.bottom-section h2,a{
+  font-size: 1rem;
+  margin: 8px;
+  color:rgb(17, 16, 16);
+}
+
+.footer-section{
+  background-color: #000;
+  text-align: center;
+  color: white;
+}
+.bottom-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-icon a{
+  margin:6px;
+  font-size: 1.4rem;
+  color: rgb(249, 135, 135);
+}   
+
+.order-section{
+  background-color: rgb(201 183 183);
+  width: 35%;
+  margin-right:20px;
+  height: 600px;
+}
+
+
+/* responsive css */
+ 
+ @media(max-width:600px){
+
+  /* #menu-icon{
+    display: block;
+    color: white;
+  }
+  .arrow.highlight{
+    display: none;
+  } */
+ 
+  .my-header{
+    top:0;
+    left:0;
+    width:100vw;
+    position: fixed;
+    z-index: 1000;
+  }
+
+   .navbar{
+    position: fixed;
+    top: 60%;
+    right: 0;
+    background: rgb(33, 34, 34);
+    backdrop-filter: blur(20px);
+    border-bottom-left-radius:2rem ;
+    border-bottom: 2px solid rgb(48, 208, 170);
+    display: none;
+
+
+  }
+  .navbar.active{
+    display: block;
+  }
+ 
+  .navbar a{
+     display:block;
+    font-size: 1rem;
+     margin:1rem;
+    color: rgb(252, 252, 254);
+  }
+   .nav a:hover{
+    color: #06f2e2;
+    cursor: pointer;
+  } 
+  .my-header .logo{
+  font-size: 1.2rem;
+} 
+} 
+  </style>
+</head>
+<body>
+
+  <div class="main-container" style="background-color: red;width: 100%;height: 600px;">
+    <div class="header">
+
+      <header class="my-header">
+    <a href="#home" class="logo">Khushi
+      <span>Cafe</span></a>
+      <i class='bx bx-menu' id="menu-icon"></i> 
+      
+      <nav class="navbar">
+        
+        <a href="#home-visit" class="active">Home</a>
+        <a href="#contact" class="active">Contact</a>
+        <a href="#about" class="active">About</a>
+        <a href="#service" class="active">Service</a>
+        <a href="menuPage.html" class="active">Menu</a>
+
+        <div class="arrow" id="HighlightBox1" >
+                    </div>
+                    <div  class="highlight" id="HighlightBox2">
+                      <h4>Click Here For Menu</h4>
+                    </div>
+                  </nav>
+                 </header> 
+    </div>
+    <div class="content" style="background-color: green;">
+     <!-- greet-time -->
+              <div class="greet-time">
+                <div class="greet">
+                  
+                  <p>Hi...
+                  </p>
+                  <span id="greet">Good Morning.</span>
+                </div> 
+                
+                
+                <div id="welcome-text" style="margin-top: 16px;color:white;font-size: 1.2rem;">
+                </div>
+                
+              </div>
+          
+    
+  
+<div class="swiper mySlider" style="margin-left:1%;margin-top:10px">
+     
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div>
+          <img src="milkchai.png" alt="milkchai">
+        </div>
+        <div class="food-info">
+          <h2>Milk Chai</h2>
+          <p>"Start your day the milky way – one sip, and the world feels right."</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div>
+          <img src="paneerbiryani.png" alt="paneerbiryani">
+        </div>
+        <div class="food-info">
+          <h2>Paneer Biryani</h2>
+          <p>“Royal flavors in every bite,
+Paneer Biryani that feels just right!”</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div>
+          <img src="veggieburger.png" alt="Burger">
+        </div>
+        <div class="food-info">
+          <h2>Veggie Burger</h2>
+          <p>“A crispy delight between soft buns,
+Our veg burger is love that stuns!”</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div>
+          <img src="paneerroll.png" alt="Fish Curry">
+        </div>
+        
+        <div class="food-info">
+          <h2>Paneer Roll</h2>
+          <p>“Wrapped with spice, love, and soul,
+Grab our paneer roll and feel whole!”_</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Navigation -->
+  </div>
+  
+
+<!-- contact section -->
+
+<div class="contact-area" id="contact">
+  <div id="contact-item">
+    <h1 id="contact-us">Contact Us</h1>
+    <!-- <span id="contact-data">Name:</span>  -->
+    <input type="text" placeholder="Name" class="input-box">
+    <!-- <span id="contact-data">Email:</span> -->
+    <input type="email" placeholder="Email" class="input-box">
+    <textarea name="message" id="message" row="50" col="50" placeholder="Type your Message"></textarea>
+    <button id="btn">Submit</button>
+  </div>
+</div>
+
+
+<!-- about section  -->
+
+<div class="about-section" id="about">
+  <div class="about-us">
+    <div class="about-img">
+      <img src="group.png" alt="">
+    </div>
+    <div class="about-msg">
+      <h1>About US</h1>
+      <p>Our restaurant community is working together with dedication and shared passion to grow and elevate the standard of professionalism across the industry.We always prioritize our customers, ensuring they feel valued, heard, and well cared for every time they visit.</p>
+    </div>
+  </div>
+</div>
+<div class="about-item">
+  <div class="item-area">
+    <div class="icon-box">
+      <i class="fa fa-birthday-cake" style="font-size:24px;color:white"></i>
+      <span id="item-name">Cake</span>
+    </div>
+    <p id="item-data">Step in for a meal, stay for the cake—because dessert should never be an afterthought.</p>
+  </div>
+  <div class="item-area">
+    <div class="icon-box">
+      <i class="fas fa-coffee" title="Coffee" style="font-size:24px;color:white"></i>
+      <span id="item-name">Coffee</span>
+    </div>
+    <p id="item-data">Start your day—or sweeten your evening—with the perfect cup of our freshly brewed coffee.</p>
+  </div>
+  <div class="item-area">
+    <div class="icon-box">
+      <i class="fas fa-hamburger" title="Burger" style="font-size:24px;color:white"></i>
+      <span id="item-name">Burger</span>
+    </div>
+    <p id="item-data">Not just a burger, it’s a bite of happiness in every layer!</p>
+  </div>
+  <div class="item-area">
+    <div class="icon-box">
+      <i class="fas fa-bowl-food" title="Soup" style="font-size:24px;color:white"></i>
+      <span id="item-name">Soup</span>
+    </div>
+    <p id="item-data">One spoon, endless comfort—discover your new favorite bowl of soup today!</p>
+  </div>
+  <div class="item-area">
+    <div class="icon-box">
+      <i class="fas fa-pizza-slice" title="Pizza" style="font-size:24px;color:white"></i>
+      <span id="item-name">Pizza</span>
+    </div>
+    <p id="item-data">Hot, cheesy, and loaded with flavor—our pizzas are love at first bite!</p>
+  </div>
+  <div class="item-area">
+    <div class="icon-box">
+      <i class="fas fa-bowl-rice" title="Noodles" style="font-size:24px;color:white"></i>
+      <span id="item-name">Noddles</span>
+    </div>
+    <p id="item-data">Let your taste buds travel—our noodles are a passport to Asian-inspired delight!</p>
+  </div>
+  <div id="service"></div>
+</div>
+
+   <!-- service part  -->
+
+<div class="service-section" >
+  <h1 class="service">Our Service</h1>
+
+  <div class="service-container">
+    <div id="service-box">
+      <h1> Dine-In Experience</h1>
+      <p>Enjoy a warm, welcoming atmosphere with attentive service and a menu that delights every taste bud. Whether it’s a family dinner or a casual outing, we make every meal special.</p>
+    </div>
+   
+    <div id="service-box">
+      <h1>Takeaway & Delivery</h1>
+      <p>Craving our food at home or the office? Order online or call us—our fast and fresh delivery brings the flavors to your doorstep.</p>
+
+    </div>
+  <div id="service-box">
+    <h1>Customized Orders & Party Catering</h1>
+    <p>From birthdays to office lunches, we offer customized meals and cake orders to make your event memorable. Pre-order to add a personal touch!</p>
+
+  </div>
+  <div id="service-box">
+    <h1>Special Menus & Seasonal Offers</h1>
+    <p>Discover our chef’s specials and limited-time offers, bringing you new tastes every season.</p>
+
+  </div>
+  </div>
+</div>
+
+<div class="bottom-section">
+  <div class="bottom-item">
+    <div id="box">
+      <h1>Contact Information</h1>
+      <h2>Prince Yadav</h2>
+      <h2>9999999999</h2>
+      <h2>xyz12@gmail.com</h2>
+    </div>
+    <div id="box">
+      <h1>Opening And Closing Hour</h1>
+      <h2>10:00 Am to 10:00 Pm</h2>
+    </div>
+    <div id="box">
+      <h1>Useful Link</h1>
+      <h2><a href="#menu">Home</a></h2>
+      <h2><a href="#contact">Contact</a></h2>
+      <h2><a href="#about">About</a></h2>
+      <h2><a href="#service">Service</a></h2>
+    </div>
+  </div>
+
+  <div class="bottom-icon">
+    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+  <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+  </div>
+    
+  </div>
+  <div class="footer-section">
+    <footer>
+      <p>&copy; 2025 Prince Restaurant. All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+</div>
+
+
+<!-- Swiper JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.mySlider', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        
+      }
+    }); 
+
+    var typed = new Typed("#welcome-text", {
+        strings: ["Welcome to <span class='Highlight_cafeName'>Khushi Cafe </span>.Your happy place for great  good vibes, and tasty bites. Come on in and make yourself at home.."],
+        typeSpeed: 10,
+      });
+
+      
+    </script>
+               
+               <script src="KhushiCafe.js"></script>
+               
+               
+              
+               
+              </body>
+              
+              
+
+</html>
+
+  </body>
+  </html>

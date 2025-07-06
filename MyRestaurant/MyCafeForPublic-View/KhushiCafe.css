@@ -14,6 +14,7 @@
 }
 
 
+
 .my-header .logo{
   color:rgb(255, 255, 255);
   font-size: 2.0rem;
@@ -276,7 +277,7 @@ width: 100%;
 margin-top: 100px;
 margin-left:100px;
 height: 500px;
-background-color: #b1aca8;
+    background-color: #f6f4f4;
 border-radius: 12px;
 overflow: hidden;
 box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -305,7 +306,7 @@ box-sizing: border-box;
 } 
 
 .food-info h2 {
-color:white;
+color:rgb(8, 8, 8);
 margin-bottom: 10px;
 font-size: 24px;
 }
@@ -314,7 +315,7 @@ font-size: 24px;
 font-size: 18px;
 line-height: 1.5;
 font-weight: bold;
-color:rgb(247, 246, 246);
+color:rgb(3, 3, 3);
 padding: 10px;
 border-radius: 8px;
 }
@@ -322,29 +323,32 @@ border-radius: 8px;
 
 .contact-area{
       width: 100vw;
-    height: 100%;
-    margin-top: 10px;
+    height: 600px;
     margin-left: 10px;
-    background-color: #b7b5b3;
-    background-size: cover;
-    position: absolute;
+    margin-top: 2px;
+    background-color: #f6f4f4;
+    border-top: 2px solid #6F4E37;
+    display: flex;
+     align-items: center;
+    justify-content: center;
+   
 }
 
 #contact-item{
- background-color: rgba(29, 21, 21, 0.5);
+ background-color: white;
+ border: 1px solid black;
     width: 40%;
     display: flex;
     flex-direction: column;
     padding: 29px;
     align-items: center;
-    margin-top: 3%;
-    margin-left: 30%;
+    justify-content: center;
     height: 350px;
     border-radius: 4px;
 }
 
 #contact-us{
-  color:white;
+  color:rgb(11, 11, 11);
   font-family: 'Abril Fatface';
   font-size: 2.6rem;
 
@@ -398,11 +402,13 @@ border-radius: 8px;
 
 .about-section{
     display: flex;
+    flex-direction: column;
+    border-top: 2px solid #6F4E37;
     width: 100%;
     height:100%;
-    margin-top: 50%;
     padding:20px;
-    background-color: #fbfafa;
+    background-color: #f6f4f4;
+
 }
 
 .about-us{
@@ -562,7 +568,7 @@ justify-content: space-around;
 
 /* responsive css */
  
- @media(max-width:500px){
+ @media(max-width:600px){
 
   .main-container{
     margin-top:92px;
@@ -589,10 +595,11 @@ justify-content: space-around;
 
   #swiper-wrapper{
     height: 50%;
-    color: red;
   }
 .swiper{
   height: 50%;
+  background-color: rgb(238, 236, 236);
+
 }
 
 .food-info h2 {
@@ -602,7 +609,7 @@ justify-content: space-around;
 
 .food-info p{
   font-size: 1rem;
-  color: white;
+  color: rgb(8, 8, 8);
 }
   #menu-icon{
     margin-top: 60px;
@@ -652,37 +659,91 @@ justify-content: space-around;
   margin-top: 60px;
 } 
 
+.contact-area {
+  margin-left: 0;
+  margin-top: 8px;
+  height: 80%;
+  border-radius: 4px;
+    margin-top: 0px;
+   border-top: 1px solid black;
+  background-color: rgb(238, 236, 236);
+
+}
+#contact-item {
+  width: 90%;
+  height: 80%;
+  margin-left: 14px;
+}
+
+#contact-us {
+  font-size: 1.4rem;
+}
+
+.input-box , #message{
+  width: 85%;
+  margin-left: 0;
+}
 .about-section{
-    /* display: flex; */
-    /* flex-direction: row; */
-    width: 100%; 
-     height:50%;
-    margin-top: 50%; 
-     padding:20px; 
-     /* background-color: #e09696; */
-} 
-
-
- .about-us{
-  width: 100px;
+  margin-top: 88%;
   height: 100%;
-  margin-top: 250px;
-  margin-left:-130px;
-    display: flex;
-    flex-direction: column;
-    background-color: red; 
+   background-color: rgb(238, 236, 236);
+   border-top: 1px solid black;
 
 }
 
+.about-img {
+    margin-left:0;
+    padding: 0;
+}
 
- .about-msg{
-  margin-top:120%;
+.about-us img{
+  width: 100%;
+  height: 200px;
+  margin-left: 0;
+  padding: 0;
+}
+.about-us{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.about-us h1{
+  font-size: 1.4rem;
+  color: white;
+}
+
+.about-item{
+  display: flex;
+  flex-direction: column;
+   background-color: rgb(238, 236, 236);
+   border-top: 1px solid black;
+
+}
+.item-area{
+  margin-top: 4px;
+  background-color: white;
+  margin-left: 0;
+   border: 1px solid black;
+
+}
+ .item-area .icon-box{
+  width: 150px;
+  color: #000;
+}
+
+#item-color{
+  color: #000;
+}
+#item-name{
   color: black;
-  background-color: rgb(151, 13, 13);
+  font-size: 1.4rem;
+  margin: 2px;
 }
- .about-img{
-  width: ;
-  height: 20px;
-  
-} 
+#item-data{
+  color: #000;
+  font-size: 1.1rem;
+  margin-top: -40px;
+
+}
 } 

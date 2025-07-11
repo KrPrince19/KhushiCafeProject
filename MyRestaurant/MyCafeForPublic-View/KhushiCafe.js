@@ -17,6 +17,7 @@ const hours = new Date().getHours();
 
     }
 
+    //navbar toggle
   window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       document.getElementById('HighlightBox1').style.display = 'none';
@@ -55,3 +56,74 @@ menuItem.onclick = () => {
  menuItem.classList.toggle('bx-x');
  navbar.classList.toggle('active');
 }
+
+
+
+  window.onload = () => {
+    const categories = ['coffee', 'chai', 'icecream', 'meal', 'shake', 'fastfood'];
+    const shown = {};
+
+    document.querySelectorAll('.box').forEach((box) => {
+      for (let cat of categories) {
+        if (box.classList.contains(cat)) {
+          // Only show the first item from each category
+          if (!shown[cat]) {
+            shown[cat] = true;
+          } else {
+            box.style.display = 'none';
+          }
+        }
+      }
+    });
+  };
+
+
+
+  function filterItems(category, clickedBtn) {
+    const allItems = document.querySelectorAll('.box');
+
+     const allButtons = document.querySelectorAll('div > button');
+
+  // 1. Remove 'active' from all buttons
+  allButtons.forEach(btn => btn.classList.remove('active'));
+
+  // 2. Add 'active' to clicked button
+  clickedBtn.classList.add('active');
+
+  
+  
+  allItems.forEach(item => {
+
+      item.classList.remove('show'); // hide with transition
+    
+      if (category === 'all') {
+
+          setTimeout(() => {
+        item.classList.add('show'); // show with fade + slide
+      }, 50);
+
+        item.style.display = 'block'; // show all
+      } else {
+
+        
+        if (item.classList.contains(category)) {
+
+          setTimeout(() => {
+        item.classList.add('show'); // show with fade + slide
+      }, 50);
+
+          item.style.display = 'block'; // show matched category
+        } else {
+
+            setTimeout(() => {
+        item.classList.add('show'); // show with fade + slide
+      }, 50);
+
+          item.style.display = 'none'; // hide others
+        }
+      }
+    });
+  }
+
+
+

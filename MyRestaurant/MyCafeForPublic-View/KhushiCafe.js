@@ -9,7 +9,7 @@ const hours = new Date().getHours();
     if(hours >= 6 && hours < 12){
       greet.textContent="Good Morning.."
     }
-    else if(hours  >= 12 && hours < 18){
+    else if(hours  >= 12 && hours < 16){
       greet.textContent="Good Afternoon.."
     }
     else{

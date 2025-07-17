@@ -397,16 +397,18 @@ color: white;
 #btn{
   margin-top: 15px;
   padding: 3px 10px 3px 10px;
-  color: #4106f2;
+  color: #0c0c0c;
+  background-color: white;
   border: 2px solid rgb(41, 11, 19);
   border-radius: 4px;
   font-family: 'Abril Fatface';
   font-size: 1.0rem;
+  font-weight: bold;
 
 }
 #btn:hover{
-  color: #06f2e2;
-  background-color: #aa0eda;
+  color: #fdffff;
+  background-color: #c479db;
   border-color: #6F4E37;
 
 }
@@ -461,6 +463,10 @@ justify-content: space-around;
   height: 100px;
   padding: 16px;
   margin-left: -9px;
+}
+
+#item-color{
+  color:white;
 }
 #item-name{
   font-size: 1.8rem;
@@ -642,24 +648,9 @@ justify-content: space-around;
     color: rgb(0, 225, 255);
   }
 
-  #swiper-wrapper{
-    height: 50%;
-  }
-.swiper{
-  height: 50%;
-  background-color: rgb(238, 236, 236);
+ 
 
-}
 
-.food-info h2 {
-  font-size: 16px;
-  color: #06f2e2;
-}
-
-.food-info p{
-  font-size: 1rem;
-  color: rgb(8, 8, 8);
-}
   #menu-icon{
     margin-top: 5px;
     display: block;
@@ -701,6 +692,7 @@ justify-content: space-around;
     color: #06f2e2;
     cursor: pointer;
   } 
+  
   .my-header .logo{
   font-size: 1.2rem;
   margin-top: 5px;
@@ -722,6 +714,12 @@ justify-content: space-around;
   margin-left: 10px;
   margin-top:  6px;
 }
+/* menu h1  */
+
+#menu{
+  font-size: 1.2rem;
+}
+
 
 #contact-us {
   font-size: 1.4rem;
@@ -790,4 +788,18 @@ justify-content: space-around;
   margin-top: -40px;
 
 }
+
+.buttons{
+  margin-left: 200px;
+}
+button{
+  width: 20px;
+}
+.item-box{
+  display: block;
+}
+/* .item-menu{
+  width: 80vw;
+} */
+
 } 

@@ -16,12 +16,12 @@
 
 
 .my-header .logo{
-  color: #8d6a6a;
-  font-family: 'Lora', serif;
+  color: rgb(5, 5, 5);
+    font-size: 2rem;
+    text-shadow: 3px 2px 2px #ff78cb;
+    text-decoration: underline;
+    font-family: 'Lora', serif;
   font-style: italic;
-  text-shadow: 2px 2px 4px #fc0404;
-  font-size: 2.0rem;
-  margin-left:2px;
 }
 .my-header span{
   font-family: 'Lora', serif;
@@ -117,11 +117,12 @@ background-color: #6F4E37;
 
 } 
 
+ /* for menu  */
 .highlight{
   width:153px;
   background-color: rgb(255, 255, 255);
-  color:#050505;
-  border:1px solid whitesmoke;
+  color:#010101;
+  border:1px solid rgb(219, 6, 6);
   border-top: -10px;
   border-radius: 4px;
     text-align: center;
@@ -295,9 +296,9 @@ height:50px;
 }
 
 .Highlight_cafeName{
-  color: rgb(244, 244, 245);
-    font-size: 1.rem;
-    text-shadow: 2px 2px 4px #fc0404;
+ color: rgb(6 6 6);
+    font-size: 2rem;
+    text-shadow: 1px 2px 0px #ff0084;
     text-decoration: underline;
     font-family: 'Lora', serif;
   font-style: italic;
@@ -558,6 +559,9 @@ justify-content: space-around;
   margin: 8px;
   color:rgb(251, 246, 246);
 }
+.bottom-section a:hover{
+  color: #00d9ff;
+}
 
 
 .bottom-icon {
@@ -587,7 +591,7 @@ justify-content: space-around;
   background-color: #1da1f2;
 }
 .bottom-icon a.fa-instagram {
-  background-color: #9a4f5e;
+  background-color: #ef1f49;
 }
 
 .bottom-icon a:hover {
@@ -601,17 +605,7 @@ justify-content: space-around;
   text-align: center;
   color: white;
 }
-/* .bottom-icon{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.bottom-icon a{
-  margin:6px;
-  font-size: 1.4rem;
-  color: rgb(249, 135, 135);
-}    */
 
 .order-section{
   background-color: rgb(201 183 183);
@@ -790,16 +784,74 @@ justify-content: space-around;
 }
 
 .buttons{
-  margin-left: 200px;
+  justify-content: center;
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 button{
-  width: 20px;
+  margin: 0;
+  width: 60px;
 }
 .item-box{
+  justify-content: center;
   display: block;
 }
-/* .item-menu{
-  width: 80vw;
-} */
+.item-menu{
+margin:0;
+display:block ;
+  
 
 } 
+.service-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#service-box{
+  width: 100vw;
+}
+.bottom-section{
+
+  height: 600px;
+}
+
+.bottom-section h1{
+  font-size: 1.8rem;
+}
+.bottom-section h2,a{
+  font-size: 1rem;
+}
+.bottom-item{
+  display: block;
+}
+#box{
+  height: 200px;
+  border-bottom: 2px solid white;
+}
+} 
+
+@media (min-width: 601px) and (max-width: 800px) {
+  .item-box {
+    grid-template-columns: auto auto; 
+  }
+  #contact-item{
+    width: 50%;
+  }
+  .input-box ,#message{
+    margin-left: 0;
+  }
+  .about-section{
+    margin: 0;
+    padding: 0;
+  }
+  .about-us img{
+    width:280px;
+    margin-left: -50px;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1400px) {
+  .item-box {
+    grid-template-columns: auto auto auto; 
+  }

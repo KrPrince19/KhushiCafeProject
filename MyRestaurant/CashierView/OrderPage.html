@@ -854,24 +854,16 @@
           <button id="make-bill" onclick="makebill()">Make Bill</button>
           
         </a>
-        <div class="bill-box">
-          
-          <table>
-            <th id="thData">Item</th>
-            <th id="thData">Quantity</th>
-            <th id="thData">Price</th>
-          </table>
-        </div>
-        
-        
-        <table id="selected-items">
-          <tr>
-            
-                <td id="name"></td>
-                <td id="quantity"></td>
-                <td id="price"></td>
-              </tr>
-              
+      
+         <table id="selected-items">
+             <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qty</th>
+          <th>Rate ₹</th>
+          <th>Total ₹</th>
+        </tr>
+      </thead>
             </table>
             
           </div>
@@ -882,25 +874,34 @@
 
     </div>
     
-    <div id="print-bill">
-      
-      <div id="Bill-Box">
+    
 
-        <div >
-          <h2> Final Bill </h2>
-        </div>
+    <div class="bill-container" id="print-bill">
 
-        <div id="bill-title">
-          
-        </div>
+      <div id="print-Content">
+
+        <h2>🍽 Khushi Cafe</h2>
+        <p> NH-Highway,Gopalganj</p>
+        <p>GSTIN: 27AAACB1234C1Z2</p>
+        <hr />
+        <p>Bill No: <span id="billNumber"></span></p>
+        <p>Date: <span id="billDate"></span></p>
+        
         <table id="output-bill">
           
         </table>
-        <h3  style="background-color: rgb(188, 198, 198);">Total Price = <span id="TotalPrice"  style="margin-left: 56%;"></span></h3>
+        
+        <p class="total">Subtotal: ₹<span id="subtotal"></span></p>
+        <p>CGST (2.5%): ₹<span id="cgst"></span></p>
+        <p>SGST (2.5%): ₹<span id="sgst"></span></p>
+        <p class="total">Grand Total: ₹<span id="total"></span></p>
+        <p class="center">Thank you! Visit again. 😊</p>
+        
       </div>
 
-      <button id="print-btn" onclick="print_btn()">Print Bill</button> 
-    </div>
+    <button onclick="printBill()">🖨 Print Bill</button>
+    <button onclick="location.reload()"> Cancel Bill</button>
+  </div>
     
     <script src="OrderPage.js"></script>
   </body>

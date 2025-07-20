@@ -38,6 +38,7 @@ function decrement(id) {
 
 
         // cost of item according to number of item 
+        const rate =  parseInt(priceInnumber );
         const totalprice =  parseInt(priceInnumber * quantityInnumber);
 
 
@@ -56,12 +57,18 @@ function decrement(id) {
             qtySpan.className = 'item-qty';
             qtySpan.textContent = quantityInnumber;
 
+            const rateSpan = document.createElement('td');
+            rateSpan.className = 'item-rate';
+            rateSpan.textContent = rate;
+
             const priceSpan = document.createElement('td');
             priceSpan.className = 'item-price';
             priceSpan.textContent = totalprice;
+            
 
             item.appendChild(nameSpan);
             item.appendChild(qtySpan);
+            item.appendChild(rateSpan);
             item.appendChild(priceSpan);
 
             selectedContainer.appendChild(item);
@@ -82,23 +89,23 @@ function decrement(id) {
 
 
 function makebill() {
+
+   // when make bill btn is clicked then billing page show
+
   const selectedItems = document.getElementById("selected-items");
   const billOutput = document.getElementById("output-bill");
-  const billTitle = document.getElementById("bill-title");
   
-
-  // Clear previous output
-  billTitle.innerHTML = "<div><h2>Item</h2> <h2>Quantity</h2><h2>Price</h2></div>";
-
+  
   // Create a single container div
   const itemList = document.createElement("table");
   itemList.className = "item-list";
-
+  
   // Copy all item-row divs into this container
   const rows = selectedItems.querySelectorAll("tr");
-
+  
+  
+  
   let totalprice=0;
-
 
   rows.forEach(row => {
     const clone = row.cloneNode(true);
@@ -107,7 +114,6 @@ function makebill() {
     const priceElement =row.querySelector(".item-price");
     if(priceElement){
       const price = parseFloat(priceElement.textContent.trim());
-      console.log(price)
       if(!isNaN(price)){
         totalprice += price;
       }
@@ -118,24 +124,67 @@ function makebill() {
   // Append the container to the output
   billOutput.appendChild(itemList);
 
-  const TotalPrice=document.getElementById("TotalPrice");
-  TotalPrice.innerText=totalprice;
+    const today = new Date().toLocaleString();
+    
+    const billNumber = getBillNumber();
+    document.getElementById("billNumber").textContent = "#" + billNumber;
+    // document.getElementById("billNumber").textContent = "#" + billNumber;
+    document.getElementById("billDate").textContent = today;
+    
+    let subtotal = totalprice;
+    const tbody = document.getElementById("billItems");
+    
+    
+    const cgst = +(subtotal * 0.100).toFixed(2);
+    const sgst = +(subtotal * 0.100).toFixed(2);
+    const grandTotal = +(subtotal + cgst + sgst).toFixed(2);
+    
+    
+    document.getElementById("subtotal").textContent = subtotal.toFixed(2);
+    document.getElementById("cgst").textContent = cgst;
+    document.getElementById("sgst").textContent = sgst;
+    document.getElementById("total").textContent = grandTotal;
+    
 
+    const billContainer=document.getElementById("print-bill");
 
+  billContainer.style.display='block';
+    
+  }
+    function getBillNumber() {
+  const lastReset = localStorage.getItem("lastReset");
+  const now = new Date();
+  const lastResetDate = lastReset ? new Date(lastReset) : null;
+
+  // Check if 24 hours have passed or not initialized
+  if (!lastResetDate || (now - lastResetDate) > 24 * 60 * 60 * 1000) {
+    localStorage.setItem("billNumber", "1");
+    localStorage.setItem("lastReset", now.toISOString());
+    return 1;
+  } else {
+    // Increment the bill number
+    let current = parseInt(localStorage.getItem("billNumber") || "0", 10);
+    current++;
+    localStorage.setItem("billNumber", current.toString());
+    return current;
+  }
 }
 
-//print function to print bill by printer
-function print_btn(){
-  const printContents = document.getElementById('Bill-Box').innerHTML;
-    const originalContents = document.body.innerHTML;
+// print bill function
 
-    document.body.innerHTML = printContents;
-    window.print();
-    document.body.innerHTML = originalContents;
-    location.reload(); // Optional: Reloads the page after printing
+function printBill(){
+  const printcontent=document.getElementById("print-Content").innerHTML;
+  const originalContent = document.body.innerHTML;
+
+  document.body.innerHTML=printcontent;
+  window.print();
+
+  document.body.innerHTML=originalContent;
+  location.reload();
 }
 
-// item page change and show function 
+
+// function to change item page display clikced page 
 function showSection(id) {
   const sections = document.querySelectorAll('.section');
   sections.forEach(sec => sec.style.display = 'none');

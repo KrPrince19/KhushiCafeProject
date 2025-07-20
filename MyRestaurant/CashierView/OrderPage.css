@@ -8,8 +8,12 @@ body{
 
 }
 .header .logo{
-  color:rgb(247, 250, 250);
-  font-size:1.8rem;
+  color: rgb(5, 5, 5);
+    font-size: 2rem;
+    text-shadow: 3px 2px 2px #ff78cb;
+    text-decoration: underline;
+    font-family: 'Lora', serif;
+  font-style: italic;
 }
 
 .header span{
@@ -27,7 +31,7 @@ body{
   width:100%;
   height: 50px;
   padding: 5px;
-  background:#b2744c;
+  background:#f2f1ef;
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
@@ -65,13 +69,13 @@ body{
 }
 
 .menu-item{
-  width:14%;
+  /* width:29%; */
   margin-left:-44px;
 }
 
 .menu-item h1{
   text-align: center;
-  width:193px;
+  width:194px;
   color:white;
   background-color: black;
 }
@@ -139,13 +143,15 @@ body{
 #item-box h1{
   font-size: 1.4rem;
 }
-
+button{
+  padding: 2px;
+}
 .billing{
  background-color: white;
  border:1px solid rgb(52, 44, 44);
   width: 30%;
   margin-right:20px;
-  height: 600px;
+  height: 100%;
 }
 #billing-page, #coffee-text{
   text-align: center;
@@ -191,43 +197,53 @@ body{
   background-color: #c9c9ab;
 }
 
-
-
- .bill-box{
-  background-color: #e3dfdd;
-} 
-
- #thData{
- padding-left:70px;
-}
-
-
-#selected-items td{
-  padding-top: 2px;
-  padding-left:70px;
+table {
+        width: 100%;
+        height: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+ border-bottom: 1px solid #ddd;
 
 }
 
+ th, td {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
 
-#print-bill{
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-areas: one;
-  margin-top: 20px;
-  padding: 15px;
-  background: #f2f2f2;
-}
-#print-bill h2{
-  text-align: center;
-} 
-.item-list td{
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  padding-left: 130px;
+    #print-bill{
+  display: none;    /* default hidden */
 
-}
+    }
+.bill-container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+h2, p {
+      text-align: center;
+      margin: 0;
+    }
+
+     .bill-container button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background: #007BFF;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .bill-container button:hover {
+      background: #0056b3;
+    }
 
 .bill-time-Title{
  display: flex;
@@ -235,52 +251,3 @@ body{
     justify-content: space-around;
 }
 
-#bill-title div{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top:-22px;
-}
-#bill-title h2{
- padding: 50px;
-  font-family: sans-serif;
-
-}
-.item-list div{
- width:68%;
- height: 20px;
-  background-color:rgb(226, 219, 219);
-  margin: 8px;
-  margin-top:-2px;
-  display: flex;
-  align-items: center;
-  justify-content: unset;
-}
-.item-list span{
-  padding: 50px;
-  font-family: sans-serif;
-  justify-content: center;
-
-}
-
-#Bill-Box{
-      border: 2px solid black;
-      border-radius: 4px;
-    margin-top: 100px;
-    margin-left: 25%;
-    width: 50%;
-}
-#print-btn{
-  width:50%;
-   margin-left:25%;
-   margin-top: 2px;
-    font-size:large; 
-    font-weight: bold; 
-    font-family: 'Abril Fatface';
-}
-
-#print-btn:hover{
-  cursor: pointer;
-  background-color: rgb(137, 53, 38);
-  color: rgb(250, 249, 249);
-}

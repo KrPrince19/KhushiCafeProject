@@ -7,6 +7,11 @@ body{
     
 
 }
+.mobileMessage{
+  display: none;
+  font-size: 0.4rem;
+  margin: 20px;
+}
 .header .logo{
   color: rgb(5, 5, 5);
     font-size: 2rem;
@@ -75,7 +80,6 @@ body{
 
 .menu-item h1{
   text-align: center;
-  width:194px;
   color:white;
   background-color: black;
 }
@@ -212,10 +216,10 @@ table {
       text-align: left;
     }
 
-    #print-bill{
-  display: none;    /* default hidden */
+     #print-bill{
+ display: none;      /* default hidden */
 
-    }
+    } 
 .bill-container {
       max-width: 400px;
       margin: auto;
@@ -228,6 +232,9 @@ table {
 h2, p {
       text-align: center;
       margin: 0;
+    }
+    .price-taxes p{
+      padding:4px;
     }
 
      .bill-container button {
@@ -251,3 +258,65 @@ h2, p {
     justify-content: space-around;
 }
 
+@media(min-width:750px) and (max-width:1023px){
+
+  .section{
+    margin-top:70px;
+    width: 50%;
+  }
+  .billing{
+    margin-top:70px;
+    /* margin-right:10px; */
+    width: 40%;
+  }
+#item-box, .item-container{
+  width: 150px;
+}
+  #item-name{
+    height: 0;
+    width: 0;
+  }
+  .menu-item h1{
+    display: none;
+  }
+  #item-name li{
+    font-size: 0.8rem;
+    padding: 4px;
+    background-color: #ddd;
+    border-radius: 10px;
+    padding: 6px;
+
+  }
+  #item-name ul{
+    background-color: white;
+    padding: 4px;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    margin-left:20px;
+
+  }
+
+}
+@media (min-width:1024px) and (max-width:1439px){
+  .section{
+    width:50%;
+    margin-left: 20px;
+  }
+  .billing{
+    margin-right:0;
+  }
+  #item-name{
+    width:20vw;
+  }
+}
+@media (max-width:749px) {
+
+  .main-container,.header{
+    opacity: 0;
+  }
+  
+  .mobileMessage{
+  display:block;
+}
+}
